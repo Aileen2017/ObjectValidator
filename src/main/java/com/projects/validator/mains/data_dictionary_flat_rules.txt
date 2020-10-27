@@ -1,0 +1,7 @@
+ClassName               FieldName         Rule          Value
+ExampleObjectTopContainer numericalField1   GreaterThan       5
+ExampleObjectSecondContainer stringField1      LengthShorterThan  100
+ExampleObjectChild		stringField1      LengthLongerThan  6
+ExampleObjectChild      numericalField1   LessThan          6
+ExampleObjectChild      numericalFieldParent1 GreaterThan 5
+ExampleObjectChild 		stringFieldParent1 		LengthShorterThan  100

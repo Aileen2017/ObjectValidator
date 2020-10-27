@@ -1,0 +1,11 @@
+ClassName               key         Rule          Value
+ExampleObjectTopContainer exampleObjectSecondContainerField.stringField1   LengthShorterThan  100
+ExampleObjectTopContainer numericalField1  GreaterThan       5
+ExampleObjectTopContainer exampleObjectSecondContainerField.exampleObjectChild.stringField1  LengthLongerThan  6
+ExampleObjectTopContainer exampleObjectSecondContainerField.exampleObjectChild.numericalField1  LessThan  6
+ExampleObjectTopContainer exampleObjectSecondContainerField.exampleObjectChild.numericalFieldParent1  GreaterThan  5
+ExampleObjectTopContainer exampleObjectSecondContainerField.exampleObjectChild.stringFieldParent1  LengthShorterThan  100
+
+
+
+
