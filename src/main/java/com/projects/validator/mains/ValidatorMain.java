@@ -9,9 +9,9 @@ import java.util.Scanner;
 import com.projects.validator.domainObjects.ExampleObjectParent;
 import com.projects.validator.domainObjects.ExampleObjectTopContainer;
 import com.projects.validator.validation.Rule;
-import com.projects.validator.validation.RuleFactory;
 import com.projects.validator.validation.flatValidation.ValidatorImpl;
 import com.projects.validator.validation.flatValidation.ValidatorImpl2;
+import com.projects.validator.validation.rules.RuleFactoryImpl;
 
 public class ValidatorMain {
 	
@@ -41,7 +41,7 @@ public class ValidatorMain {
 	
 	static Rule generateRule(String[] items) {
 		
-		return RuleFactory.createRule(items[2],items[3]);
+		return RuleFactoryImpl.createRule(items[2],items[3]);
 		
 	}
 	

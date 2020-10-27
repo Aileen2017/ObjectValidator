@@ -1,7 +1,7 @@
 package com.projects.validator.domainObjects;
 
-import com.projects.validator.domainObjects.domainObjectInterfaces.ValidatorAware;
-import com.projects.validator.validation.validationInterfaces.Validator;
+import com.projects.validator.validation.Validator;
+import com.projects.validator.validation.ValidatorAware;
 
 
 public class ExampleObjectParent implements ValidatorAware {

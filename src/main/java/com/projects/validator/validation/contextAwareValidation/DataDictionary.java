@@ -11,13 +11,17 @@ import java.util.ListIterator;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
-import com.projects.validator.exception.ExceptionInvalidData;
 import com.projects.validator.validation.Rule;
 import com.projects.validator.validation.RuleFactory;
+import com.projects.validator.validation.contextAwareValidation.Exception.ExceptionInvalidData;
+import com.projects.validator.validation.rules.ObjectFieldRule;
+import com.projects.validator.validation.rules.RuleFactoryImpl;
 
 import java.util.Scanner;
 
 public class DataDictionary {
+	
+	RuleFactory ruleFactory;
 	
 	static final String inputFile = "src/main/java/com/projects/validator/mains/data_dictionary_context_aware_rules.txt";
 	static HashMap<String, ObjectFieldRule> dataDictionary = new HashMap<String, ObjectFieldRule>();
@@ -54,6 +58,12 @@ public class DataDictionary {
 			throw new ExceptionInInitializerError(e.getMessage());
 		}
 		
+		
+	}
+	
+	public DataDictionary(RuleFactory _ruleFactory) {
+		
+		ruleFactory = _ruleFactory;
 		
 	}
 	
@@ -100,7 +110,7 @@ public class DataDictionary {
 			Entry<String, RuleData> entry = (Entry<String, RuleData>) ruleItr.next();
 			String[] fieldNames = ((String)entry.getKey()).split("\\.");
 			if(fieldNames.length== index) {
-				Rule rule = RuleFactory.createRule(fieldNames[index-1],entry.getValue().ruleName, entry.getValue().value);
+				Rule rule = ruleFactory.createRule(fieldNames[index-1],entry.getValue().ruleName, entry.getValue().value);
 				objectFieldRule.rulesList.add(rule);
 			}
 			else {	
@@ -115,9 +125,7 @@ public class DataDictionary {
 		
 		return objectFieldRule;
 		
-	}
-	
-	
+		
 	
 	
 

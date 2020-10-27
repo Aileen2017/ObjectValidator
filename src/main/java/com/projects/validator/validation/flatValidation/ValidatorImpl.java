@@ -10,7 +10,7 @@ import com.projects.validator.domainObjects.ExampleObjectChild;
 import com.projects.validator.domainObjects.ExampleObjectParent;
 import com.projects.validator.domainObjects.ExampleObjectTopContainer;
 import com.projects.validator.validation.Rule;
-import com.projects.validator.validation.validationInterfaces.Validator;
+import com.projects.validator.validation.Validator;
 
 public class ValidatorImpl implements Validator{
 	

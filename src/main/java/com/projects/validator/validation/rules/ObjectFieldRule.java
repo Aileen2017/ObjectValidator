@@ -1,10 +1,9 @@
-package com.projects.validator.validation.contextAwareValidation;
+package com.projects.validator.validation.rules;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.projects.validator.validation.PrimitiveFieldRule;
 import com.projects.validator.validation.Rule;
 
 public class ObjectFieldRule extends Rule{
@@ -30,6 +29,9 @@ public class ObjectFieldRule extends Rule{
 	@Override
 	public boolean validate(Object actualValue) {
 		Object fieldValue = null;
+		
+		
+		
 		for(Rule rule: rulesList) {	
 			//isInstance check left object is child of right side class, 
 			//while isAssignableFrom check left is parent of right side class

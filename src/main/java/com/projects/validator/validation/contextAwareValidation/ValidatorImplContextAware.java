@@ -1,10 +1,15 @@
 package com.projects.validator.validation.contextAwareValidation;
 
-import com.projects.validator.validation.validationInterfaces.Validator;
+import com.projects.validator.validation.Validator;
+import com.projects.validator.validation.rules.ObjectFieldRule;
 
 public class ValidatorImplContextAware implements Validator {
 
-	static DataDictionary dataDictionary;
+	DataDictionary dataDictionary;
+	
+	public ValidatorImplContextAware(DataDictionary _dataDictionary) {
+		dataDictionary = _dataDictionary;
+	}
 	
 	@Override
 	public boolean validate(Object o) {
@@ -12,9 +17,6 @@ public class ValidatorImplContextAware implements Validator {
 		ObjectFieldRule rules = DataDictionary.getRulesForObject(o);
 		return rules.validate(o);
 	}
-	
-	
-	
-	
+
 
 }

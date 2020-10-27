@@ -1,4 +1,4 @@
-package com.projects.validator.exception;
+package com.projects.validator.validation.contextAwareValidation.Exception;
 
 public class ExceptionInvalidData extends Exception {
 	

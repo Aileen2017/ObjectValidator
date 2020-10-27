@@ -2,8 +2,8 @@ package com.projects.validator.mains;
 
 import com.projects.validator.domainObjects.ExampleObjectTopContainer;
 import com.projects.validator.validation.contextAwareValidation.DataDictionary;
-import com.projects.validator.validation.contextAwareValidation.ObjectFieldRule;
 import com.projects.validator.validation.contextAwareValidation.ValidatorImplContextAware;
+import com.projects.validator.validation.rules.ObjectFieldRule;
 
 public class ValidatorContextAwareMain {
 	//three ways to validate object

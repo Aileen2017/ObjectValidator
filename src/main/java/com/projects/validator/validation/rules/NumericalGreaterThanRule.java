@@ -1,4 +1,4 @@
-package com.projects.validator.validation;
+package com.projects.validator.validation.rules;
 
 public class NumericalGreaterThanRule extends PrimitiveFieldRule {
 

@@ -1,6 +1,8 @@
-package com.projects.validator.validation;
+package com.projects.validator.validation.rules;
 
 import java.lang.reflect.Field;
+
+import com.projects.validator.validation.Rule;
 
 public class PrimitiveFieldRule extends Rule{
 	
