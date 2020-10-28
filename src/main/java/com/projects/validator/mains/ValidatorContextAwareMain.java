@@ -4,6 +4,7 @@ import com.projects.validator.domainObjects.ExampleObjectTopContainer;
 import com.projects.validator.validation.contextAwareValidation.DataDictionary;
 import com.projects.validator.validation.contextAwareValidation.ValidatorImplContextAware;
 import com.projects.validator.validation.rules.ObjectFieldRule;
+import com.projects.validator.validation.rules.RuleFactoryImpl;
 
 public class ValidatorContextAwareMain {
 	//three ways to validate object
@@ -12,7 +13,8 @@ public class ValidatorContextAwareMain {
 		ExampleObjectTopContainer exampleObjectTopContainer = new ExampleObjectTopContainer();
 		
 		//way1: use domain object to call validator
-		ValidatorImplContextAware validatorImpl = new ValidatorImplContextAware();
+		DataDictionary dataDictionary = new DataDictionary(new RuleFactoryImpl());
+		ValidatorImplContextAware validatorImpl = new ValidatorImplContextAware(dataDictionary);
 		System.out.println(exampleObjectTopContainer.validate(validatorImpl));
 		
 		//way2: use validator to call domain object

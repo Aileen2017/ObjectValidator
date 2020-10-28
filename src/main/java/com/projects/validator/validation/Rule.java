@@ -1,10 +1,8 @@
 package com.projects.validator.validation;
 
-public abstract class Rule {
+public interface Rule {
 	
-	public String fieldName;
-	
-	public abstract boolean validate(Object containerValue);
+	public boolean validate(Object containerValue);
 	
 	
 

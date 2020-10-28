@@ -4,12 +4,12 @@ import java.lang.reflect.Field;
 
 import com.projects.validator.validation.Rule;
 
-public class PrimitiveFieldRule extends Rule{
+public class PrimitiveFieldRule implements Rule{
 	
-	
+	public String fieldName;
 	public Object targetedValue;
 	
-	public PrimitiveFieldRule(){
+	public PrimitiveFieldRule(){	
 		
 	}
 	

@@ -21,7 +21,7 @@ import java.util.Scanner;
 
 public class DataDictionary {
 	
-	RuleFactory ruleFactory;
+	static RuleFactory ruleFactory;
 	
 	static final String inputFile = "src/main/java/com/projects/validator/mains/data_dictionary_context_aware_rules.txt";
 	static HashMap<String, ObjectFieldRule> dataDictionary = new HashMap<String, ObjectFieldRule>();
@@ -75,8 +75,7 @@ public class DataDictionary {
 			loadRules(o);
 			
 		}
-		return dataDictionary.get(className);
-		
+		return dataDictionary.get(className);	
 		
 	}
 	
@@ -101,7 +100,7 @@ public class DataDictionary {
 		ObjectFieldRule objectFieldRule = new ObjectFieldRule();
 		dataDictionary.put(className, objectFieldRule);
 		loadRules(ruleItr,1, objectFieldRule);
-				
+		//dataDictionary.put(className, objectFieldRule.rulesList);		
 	}
 	
 	static ObjectFieldRule loadRules(ListIterator ruleItr, int index, ObjectFieldRule objectFieldRule) {
@@ -126,6 +125,7 @@ public class DataDictionary {
 		return objectFieldRule;
 		
 		
+	}	
 	
 	
 
